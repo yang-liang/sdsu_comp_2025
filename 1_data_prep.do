@@ -3,11 +3,11 @@ clear
 *** Set your directory paths
 global comp2025 "${sdsu_comp}/Comp 2025"
 global raw_data  "${comp2025}/ACS/data/raw"
-global output_data  "${comp2025}/ACS/data/processed"
+global output_data  "${comp2025}/ACS/data/clean"
 
 use "${raw_data}/usa_00002.dta"
 
-** Keep only waves from 2010 to 2012 (If you want to expand, download ACS from earlier years and adapt the min and max)
+** Keep only waves from 2010 to  (If you want to expand, download ACS from earlier years and adapt the min and max)
  local min=2010
  local max=2015
 
@@ -18,7 +18,7 @@ keep if inrange(year,`min',`max')
 **** Identify children – Restriction: They must be under 18 years old
 preserve
 keep momloc serial sex age year
-keep if inrange(age,0,25)
+keep if inrange(age,0,18)
 rename momloc pernum
 rename sex sexchild
 rename age agechild
@@ -88,6 +88,4 @@ gen lfp= (labforce==2)
 
 lab var lfp "Labor Force Participation"
 
-
-
-save "${output_data}\main_data.dta",replace
+save "${output_data}/main_data.dta",replace
