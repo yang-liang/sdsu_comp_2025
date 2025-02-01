@@ -2,8 +2,8 @@ clear
 
 *** Set your directory paths
 global comp2025 "${sdsu_comp}/Comp 2025"
-global raw_data  "${comp2025}/ACS/data/raw"
-global output_data  "${comp2025}/ACS/data/clean"
+global raw_data  "${comp2025}/data/acs/raw"
+global output_data  "${comp2025}/data/acs/clean"
 
 use "${raw_data}/usa_00002.dta"
 
