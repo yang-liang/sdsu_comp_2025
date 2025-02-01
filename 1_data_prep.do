@@ -7,7 +7,7 @@ global output_data  "${comp2025}/data/acs/clean"
 
 use "${raw_data}/usa_00002.dta"
 
-** Keep only waves from 2010 to  (If you want to expand, download ACS from earlier years and adapt the min and max)
+** Keep only waves from 2010 to 2015 (If you want to expand, download ACS from earlier years and adapt the min and max)
  local min=2010
  local max=2015
 
