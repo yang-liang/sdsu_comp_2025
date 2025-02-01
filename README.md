@@ -6,7 +6,7 @@ This page is designed for SDSU Economics graduate students preparing for their c
 ## Data Source
 The raw data for this project is available via the following Google Drive link:
 
-[ACS Data (raw and clean)](https://drive.google.com/drive/folders/1WwI31_8Ap-ltO0hyC3HnM0MJrZqSTTXw?usp=sharing)
+[ACS Data (raw and clean)](https://drive.google.com/drive/folders/1WxvZlMBIkWngPEjGe63sQ2maRPF5KKPB?usp=sharing)
 
 Data is sourced from IPUMS USA, ensuring consistency with previous research and enabling a reliable replication exercise.
 
