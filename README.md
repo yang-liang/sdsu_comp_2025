@@ -16,5 +16,5 @@ Data is sourced from IPUMS USA, ensuring consistency with previous research and 
 
 ## Instructions
 1. Download the raw ACS data from the provided Google Drive link.
-2. Clean and organize the dataset. (I've provided some code that cleans and structures ACS data from 2010–2015, making it suitable for replication—if we think cleaning and doing the analysis is too much for the given timeframe. The framework is flexible and can be easily extended, so feel free to modify as needed.)
+2. Clean and organize the dataset. (I've provided some [code](yang-liang/sdsu_comp_2025/blob/main/1_data_prep.do) that cleans and structures ACS data from 2010–2015, making it suitable for replication—if we think cleaning and doing the analysis is too much for the given timeframe. The framework is flexible and can be easily extended, so feel free to modify as needed.)
 3. Perform the replication analysis following the instructions.
