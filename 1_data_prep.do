@@ -56,13 +56,13 @@ reshape wide sexchild agechild, i(ID_per) j(sort)
 ** Keep only women with at least two children
 keep if agechild2 != .
 
-***** Generate Instrumental Variables
+/* ***** Generate Instrumental Variables
 
 gen two_boys = (sexchild1 == 1 & sexchild2 == 1)
 gen two_girls = (sexchild1 == 2 & sexchild2 == 2)
 gen same_sex = (sexchild1 == sexchild2)
 
-keep two_boys two_girls same_sex ID_per
+keep two_boys two_girls same_sex ID_per */
 
 sort ID_per
 tempfile children_instrument
@@ -79,13 +79,12 @@ merge 1:1 ID_per using "`children_instrument'"
 
 keep if _merge==3
 
-** Keep only relevant variables (e.g., ID, indicators, covariates)
-keep ID_per two_boys two_girls same_sex labforce uhrswork educ race age sex nchild
+/* ** Keep only relevant variables (e.g., ID, indicators, covariates)
+keep ID_per two_boys two_girls same_sex labforce uhrswork educ race age sex nchild */
 
 *** Generate the variables for the analysis (clean them). Example
 tab labforce
-gen lfp= (labforce==2)
+   gen lfp= (labforce==2)
+   lab var lfp "Labor Force Participation"
 
-lab var lfp "Labor Force Participation"
-
-save "${output_data}/main_data.dta",replace
+save "${output_data}/main_data_v2.dta",replace
